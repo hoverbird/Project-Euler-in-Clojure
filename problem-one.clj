@@ -7,4 +7,4 @@
     (zero? (rem number 5)) 
     (zero? (rem number 3))))
 
-(reduce + (filter divisible-by-5-or-3 a-thousand))
+(print (reduce + (filter divisible-by-5-or-3 a-thousand)))
