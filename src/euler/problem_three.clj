@@ -3,7 +3,7 @@
    What is the largest prime factor of the number 600851475143?")
 
 (def huge 600851475143)
-  
+
 (defn is-factor [num factor]
   (and (> factor 1)
        (zero? (rem num factor))

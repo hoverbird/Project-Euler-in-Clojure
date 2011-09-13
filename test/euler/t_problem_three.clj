@@ -9,7 +9,8 @@
   (is-prime 4) => falsey
   (is-prime 8) => falsey
   (is-prime 13) => truthy
-  (is-prime 29) => truthy)
+  (is-prime 29) => truthy
+  (is-prime huge) => false)
 
 (facts "about what is and is not a factor of a number"
   (is-factor 4 2) => true
@@ -23,6 +24,5 @@
   (factors 13195) => (contains [5 7 13 29]))
 
 (facts "about prime factors"
-  (is-prime huge) => false
   (prime-factors 25) => (contains [5])
   (prime-factors 13195) => (contains [5 7 13 29]))
