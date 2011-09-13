@@ -14,7 +14,9 @@
   (is-prime 2) => falsey
   (is-prime 3) => truthy
   (is-prime 4) => falsey
-  (is-prime 8) => falsey)
+  (is-prime 8) => falsey
+  (is-prime 13) => truthy
+  (is-prime 29) => truthy)
 
 (facts "about factors"
   (factors 12) => (seq [2 3 4 6])
@@ -22,5 +24,6 @@
 
 (facts "about prime factors"
   (is-prime huge) => false
-  (prime-factors 13195) => (seq [5 7 13 29])
+  (prime-factors 25) => (contains [5])
+  ;(prime-factors 13195) => (contains [5 7 13 29])
 )

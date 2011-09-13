@@ -18,4 +18,4 @@
   (filter (fn [i] (is-factor num i)) (range num)))
 
 (defn prime-factors [num]
-  (filter is-prime (factors num)))
+  (filter is-prime (seq (factors num))))
