@@ -9,13 +9,20 @@
        (zero? (rem num factor))
        (not (= num factor))))
 
-(defn is-prime [num]
-  (and
-    (> num 2)
-    (< (int (Math/sqrt num)) 2)))
+; (defn is-prime [num]
+;   (and
+;     (> num 2)
+;     (< (int (Math/sqrt num)) 2)))
 
-(defn factors [num]
-  (filter (fn [i] (is-factor num i)) (range num)))
+; (defn factors [num]
+;   (filter (fn [i] (is-factor num i)) (range (/ num 2))))
+
+(defn factors [n]
+  (map #(/ n %) (filter #(zero? (rem n %)) (range 1 (+ n 1)))))
+
+(defn is-prime [n]
+  (or (= n 2) (= 2 (count (take 3 (factors n))))))
+
 
 (defn prime-factors [num]
   (filter is-prime (seq (factors num))))
